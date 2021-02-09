@@ -1,3 +1,4 @@
+import 'package:first_app/pages/counter_machine_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -26,56 +27,7 @@ class MyApp extends StatelessWidget {
           // closer together (more dense) than on mobile platforms.
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: HomePage());
+        home: CounterMachinePage());
   }
 }
 
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  int value = 0;
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("First Page"),
-        centerTitle: true,
-      ),
-      body: Container(
-        width: 800.0,
-        color: Colors.grey,
-        padding: const EdgeInsets.only(top: 150.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(
-              value.toString(),
-              style: TextStyle(fontSize: 58.0),
-            ),
-            RaisedButton(
-                child: Text("Add"),
-                color: Colors.red,
-                onPressed: () {
-                  setState(() {
-                    value++;
-                  });
-                  print(value);
-                }),
-            RaisedButton(
-                child: Text("Sub"),
-                color: Colors.green,
-                onPressed: () {
-                  setState(() {
-                    value--;
-                  });
-                  print(value);
-                })
-          ],
-        ),
-      ),
-    );
-  }
-}
