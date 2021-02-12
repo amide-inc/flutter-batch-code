@@ -1,4 +1,4 @@
-import 'package:first_app/pages/counter_machine_page.dart';
+import 'package:first_app/pages/news_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           // closer together (more dense) than on mobile platforms.
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: CounterMachinePage());
+        home: NewsPage() );
   }
 }
 
